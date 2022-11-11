@@ -1,6 +1,3 @@
-print(dir(list))
-
-
 def add_names():
     """
     This method will add names to the list.
