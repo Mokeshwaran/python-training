@@ -35,19 +35,17 @@ while flag:  # This while loop is initially set to True, to mimic do-while loop.
     choice = int(input('Choose 1: '))
     if choice == 1:
         add(input('Enter a Name to add: '))  # Adds a name
-        flag = True
 
     elif choice == 2:
         try:
             delete(input('Enter a Name to delete: '))  # Deletes a name
-            flag = True
         except ValueError:
             print('Entered value doesn\'t exist')  # Thrown if the data is not found.
 
     elif choice == 3:
         print(view())  # Display names
-        flag = True
 
     else:
         flag = False  # Making flag false to break the loop.
-        pass
+
+print(dir(list))
