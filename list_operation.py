@@ -27,7 +27,7 @@ def filter_names():
     :return: Filtered list of names
     """
     filter_word = input("Type the name to filter: ")
-    filtered_names.clear()
+    filtered_names = []
     for index in names:
         if index.startswith(filter_word):
             # If the name starts with filter_word,
@@ -36,7 +36,7 @@ def filter_names():
     return filtered_names
 
 
-def delete_a_name():
+def delete_name():
     """
     This method will delete a name given by the user.
 
@@ -49,7 +49,7 @@ def delete_a_name():
     return names
 
 
-def remove_the_name_at_last():
+def remove_last_name():
     """
     This method will remove the last element from the list.
 
@@ -59,7 +59,7 @@ def remove_the_name_at_last():
     return names
 
 
-def reverse_the_names():
+def reverse_names():
     """
     This method will reverse all the elements in the list.
 
@@ -69,7 +69,7 @@ def reverse_the_names():
     return names
 
 
-def sort_the_names_a_z():
+def sort_names_a_z():
     """
     This method will sort the names alphabetically.
 
@@ -79,7 +79,7 @@ def sort_the_names_a_z():
     return names
 
 
-def sort_the_names_z_a():
+def sort_names_z_a():
     """
     This method will sort the names reverse alphabetically.
 
@@ -90,7 +90,7 @@ def sort_the_names_z_a():
     return names
 
 
-def count_the_names(name):
+def count_names(name):
     """
     This method will count the number of given name in the list.
 
@@ -100,8 +100,7 @@ def count_the_names(name):
     return names.count(name)
 
 
-names = []  # These lists are defined globally because of losing data while operating.
-filtered_names = []
+names = []  # This list is defined globally because of losing data while operating.
 flag = True
 while flag:  # While loop initially set to True to mimic do-while loop.
     choice = int(input("Enter your choice: "))
@@ -112,14 +111,14 @@ while flag:  # While loop initially set to True to mimic do-while loop.
     elif choice == 3:
         print(filter_names())
     elif choice == 4:
-        print(delete_a_name())
+        print(delete_name())
     elif choice == 5:
-        print(remove_the_name_at_last())
+        print(remove_last_name())
     elif choice == 6:
-        print(sort_the_names_a_z())
+        print(sort_names_a_z())
     elif choice == 7:
-        print(sort_the_names_z_a())
+        print(sort_names_z_a())
     elif choice == 8:
-        print(count_the_names(input("Enter the name to count the number of names: ")))
+        print(count_names(input("Enter the name to count the number of names: ")))
     else:
         flag = False

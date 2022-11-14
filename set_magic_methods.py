@@ -1,0 +1,17 @@
+primary = {1, 2, 3, 4, 5}
+secondary = {1, 2, 3}
+print(primary.__and__(secondary))
+print(primary.__contains__(3))
+print(primary.__dir__())
+print(primary.__doc__)
+print(primary.__eq__(secondary))
+print(primary.__ge__(secondary))
+print(primary.__gt__(secondary))
+print(primary.__le__(secondary))
+print(primary.__lt__(secondary))
+print(primary.__ne__(secondary))
+print(primary.__iand__(secondary))
+print(primary.__ior__(secondary))
+print(primary.__eq__(secondary))
+print(primary.__or__(secondary))
+print(primary.__sizeof__())
