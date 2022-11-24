@@ -15,7 +15,7 @@ def factorial(x):
         return 1
     else:
         return x * factorial(x - 1)
-
+map(factorial, [1,2,3])
 
 def div(a, b=1):
     return a / b

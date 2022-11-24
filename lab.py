@@ -92,9 +92,13 @@ def outer():
 
 outer()
 
+min()
 num = 0
 def demo():
     print(num)  # UnboundLocalError: cannot access local variable 'num' where it is not associated with a value
     num=1
     print("The Number is:",num)
 demo()
+
+# ---------------------------------------------BUILT-INS---------------------------------------------
+
