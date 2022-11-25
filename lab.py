@@ -92,13 +92,27 @@ def outer():
 
 outer()
 
-min()
 num = 0
-def demo():
-    print(num)  # UnboundLocalError: cannot access local variable 'num' where it is not associated with a value
-    num=1
-    print("The Number is:",num)
-demo()
+# def demo():
+#     print(num)  # UnboundLocalError: cannot access local variable 'num' where it is not associated with a value
+#     num=1
+#     print("The Number is:",num)
+# demo()
 
 # ---------------------------------------------BUILT-INS---------------------------------------------
 
+a = [1, 2, 3, 4, 5]
+b = [10, 20, 30, 40, 50, 60]
+
+x = map(lambda y: y + y[::-1], zip(a, b))
+print(list(x))
+x = map(lambda a: a, filter(lambda q: q + q if q > 25 else ..., b))
+print(list(x))
+x = map(lambda y: y + y[::-1], enumerate(a))
+print(list(x))
+# x = map(lambda y: y + y[::-1], type(a))  # TypeError
+# print(list(x))
+# x = map(lambda y: y + y[::-1], id(a))  # TypeError
+# print(list(x))
+x = map(lambda y: y + y, range(10))
+print(list(x))

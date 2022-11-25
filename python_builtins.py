@@ -2,7 +2,7 @@ import functools
 
 
 def factorial(s):
-    if s <= 1:
+    if s == 1:
         return 1
     else:
         return s * factorial(s - 1)
@@ -12,10 +12,11 @@ a = [2, 4, 6, 8, 10]
 b = [12, 13, 14, 15]
 for i in a:
     print(factorial(i))
-
+print(type(a))
 fact = map(factorial, a)
-print(*fact)
+print(*map(factorial, a))
 
+print(tuple(range(10, 20, 2)))
 factorials = lambda s: 1 if s <= 1 else s * factorials(s - 1)
 print(*map(factorials, a))
 
@@ -26,7 +27,7 @@ print(*map(gcd, a, b))
 
 x = {i: j for i, j in enumerate(a, start=20)}
 print(x)
-x = [(i, j) for i, j in enumerate(a, start=10)]
+x = [(i, j) for i, j in enumerate(a, 10)]
 print(x)
 
 
@@ -46,4 +47,5 @@ print(list(age))
 players = zip(a, b)
 print(list(players))
 
-print(functools.reduce(lambda a, b: a - b, users))
+# print(functools.reduce(lambda a: a, users))  # TypeError: <lambda>() takes 1 positional argument but 2 were given
+print(functools.reduce(lambda a, b: a + b, users))
