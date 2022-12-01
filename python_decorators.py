@@ -5,8 +5,8 @@
 # print(operate(sub, 10, 20))
 #
 import math
-
-
+#
+#
 # def is_called():
 #     def is_returned():
 #         print("Hello")
@@ -66,26 +66,50 @@ import math
 # print(deivi.__code__.co_positions())
 # print(deivi.__closure__)
 
-# def square_root_eqn(func):
-#     def inner(a, b, c):
-#         d = b ** 2 - 4 * a * c
-#         func(a, b, d)
-#
-#     return inner
-#
-#
-# def second_part(func):
-#     def inner(a, b, d):
-#         q = -b + math.sqrt(d)
-#         func(a, q)
-#
-#     return inner
-#
-#
-# @square_root_eqn
-# @second_part
-# def quad(a, quad_eqn):
-#     print(quad_eqn / 2 * a)
-#
-#
-# quad(1, 5, 6)
+
+def square_root_eqn(func):
+    def inner(a, b, c):
+        d = b ** 2 - 4 * a * c
+        func(a, b, d)
+
+    return inner
+
+
+def second_part(func):
+    def inner(a, b, d):
+        q = -b + math.sqrt(d)
+        func(a, q)
+
+    return inner
+
+
+@square_root_eqn
+@second_part
+def quad(a, quad_eqn):
+    print(quad_eqn / 2 * a)
+
+
+quad(1, 5, 6)
+
+
+def error_message(func):
+    def inner(a, b):
+        if b == 0:
+            return "Error can't divide by 0"
+        else:
+            return func
+    return inner
+
+
+@error_message
+def divide(a, b):
+    return a / b
+
+
+@error_message
+def modulo(a, b):
+    return a % b
+
+
+print(divide(10, 2))
+print(modulo(10, 0))
