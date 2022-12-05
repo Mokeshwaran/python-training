@@ -86,10 +86,10 @@ def second_part(func):
 @square_root_eqn
 @second_part
 def quad(a, quad_eqn):
-    print(quad_eqn / 2 * a)
+    return quad_eqn / 2 * a
 
 
-quad(1, 5, 6)
+print(quad(1, 5, 6))
 
 
 def error_message(func):
@@ -111,5 +111,8 @@ def modulo(a, b):
     return a % b
 
 
-print(divide(10, 2))
-print(modulo(10, 0))
+a = int(input("Enter a number: "))
+b = int(input("Enter a number: "))
+
+print(divide(a, b))
+print(modulo(a, b))
