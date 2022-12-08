@@ -15,8 +15,8 @@ class Education(Student):
     # If inherited class inherits from a class that contains an
     # abstract method then it must implement that method in inherited class.
     # TypeError: Can't instantiate abstract class Education with abstract method details
-    def details(self):
-        ...
+    # def details(self):
+    ...
 
 
 class Address(Student):
@@ -26,7 +26,5 @@ class Address(Student):
 
 a = Address("Mokeshwaran", 23)
 print(a.details())
-b = Student("Mokeshwaran", 23)
+b = Education("Mokeshwaran", 23)
 print(b.details())
-c = Education("Mokeshwaran", 23)
-print(c.details())
