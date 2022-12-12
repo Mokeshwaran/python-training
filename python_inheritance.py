@@ -79,9 +79,8 @@
 #             flag = False
 
 class Instruments:
-    def __init__(self, units, title, color, **args):
+    def __init__(self, units, title, color):
         # super(Instruments, self).__init__(units, title, color)
-        print(units)
         self.units = units
         self.title = title
         self.color = color
@@ -97,7 +96,7 @@ class Instruments:
 
 
 class Manufacturer:
-    def __init__(self, name, description, location, **args):
+    def __init__(self, name, description, location):
         # super(Manufacturer, self).__init__(name, description, location)
         self.name = name
         self.description = description
@@ -135,12 +134,13 @@ class Manufacturer:
 class Percussion(Instruments, Manufacturer):
     def __init__(self, units, title, color, diameter, name, description, location):
         # super().__init__()
-        super().__init__(units=units, title=title, color=color, name=name, description=description, location=location)
+        Instruments.__init__(self, units, title, color)
+        Manufacturer.__init__(self, name, description, location)
         self.diameter = diameter
 
     def __str__(self):
-        return f"{super().__str__()}\n" \
-               f"{super(Manufacturer, self).__str__()}" \
+        return f"{Instruments.__str__(self)}\n" \
+               f"{Manufacturer.__str__(self)}" \
                f"Diameter: {self.diameter}"
 
 

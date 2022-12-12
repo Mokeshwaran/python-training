@@ -16,6 +16,7 @@ class User:
 
 
 path = os.getcwd()
+print("Path: ", path)
 
 flag = True
 while flag:
@@ -27,7 +28,7 @@ while flag:
                    "6. Restore the original image data to the original file\n"
                    "7. Duplicate image data from the copied image data\n"
                    "Enter the choice: ")
-    file = open(path + '\\User Details\\userdetails.txt', 'a+')
+    file = open(path + '\\User Details\\user.txt', 'a+')
     match choice:
         case '1':
             name = input("Enter name: ")
