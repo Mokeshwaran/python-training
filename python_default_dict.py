@@ -16,6 +16,8 @@ class Staff:
         self.__dob = dob
         self.email = email
         self.ph_number = ph_number
+
+    def set_staff(self, name, dob, email, ph_number):
         self.staff[self.staff_id] = [name, dob[6: 10], email, ph_number]
 
     def get_staff(self, staff_id):
@@ -24,11 +26,12 @@ class Staff:
     def get_staffs(self):
         print(self.staff.items())
 
-    def del_staff(self):
-        del self
+    def del_staff(self, staff_id):
+        self.staff.pop(staff_id)
         print("Staff Deleted")
 
 
+staff = Staff()
 flag = True
 while flag:
     choice = input("1. Add\n"
@@ -42,19 +45,19 @@ while flag:
             dob = input("Enter Date Of Birth: ")
             email = input("Enter Email: ")
             ph_number = input("Enter Phone Number: ")
-            staff = Staff(name, dob, email, ph_number)
+            staff.set_staff(name, dob, email, ph_number)
             print("Staff Added")
 
         case '2':
             staff_id = int(input("Enter Staff ID: "))
-            find_staff = Staff()
-            print(find_staff.get_staff(staff_id))
+            print(staff.get_staff(staff_id))
 
         case '3':
             staff.get_staffs()
 
         case '4':
-            del staff
+            s_id = int(input("Enter Staff ID:"))
+            staff.del_staff(s_id)
 
         case _:
             flag = False

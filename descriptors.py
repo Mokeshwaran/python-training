@@ -27,6 +27,17 @@ del temp.celsius
 # print(temp.celsius)
 
 
+class Faherenheit:
+    def __init__(self, celsius):
+        self.celsius = celsius
+
+    @property
+    def get(self):
+        return self.celsius
+
+    @property.setter
+    def set(self, celsius):
+        self.celsius = celsius
 
 
 # Using __del__ will raise:

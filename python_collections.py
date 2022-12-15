@@ -1,5 +1,5 @@
 import os
-from collections import Counter, OrderedDict
+from collections import Counter
 
 
 path = os.getcwd()
@@ -7,9 +7,5 @@ with open(path + "\\names.txt", 'r') as names:
     name = names.readlines()
     person_name = Counter(name)
 
-print(person_name.keys())
+print(person_name.items())
 
-od = OrderedDict()
-d = {'a': 1, 'b': 2, 'c': 3}
-d['b'] = 5
-print(d)
