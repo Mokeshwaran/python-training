@@ -1,0 +1,10 @@
+Subclass of NamedTuple
+UserDict and Dict diff.
+OrderedDict method in every collections
+Mock usecase function simulation
+Methods in Mock
+Setup and Teardown of Mock
+How to append in file operation. "c"
+MVT -> just like MVC
+assertIs how to check string by int
+base class for exception - Base Exception.

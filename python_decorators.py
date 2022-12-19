@@ -88,7 +88,7 @@ def second_part(func):
 def quad(a, quad_eqn):
     return quad_eqn / 2 * a
 
-
+square_root_eqn(second_part(quad(1, 5 ,6)))
 print(quad(1, 5, 6))
 
 

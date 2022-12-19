@@ -1,9 +1,3 @@
-# class UserException(Exception):
-#     def __init__(self, msg="Something Went Wrong"):
-#         self.msg = msg
-#         # super().__init__(self.msg)
-
-
 class CelestialBodyException(Exception):
     def __init__(self, msg="Something Went Wrong"):
         self.msg = msg
